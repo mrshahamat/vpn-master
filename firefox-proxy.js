@@ -1,4 +1,3 @@
-/* globals browser */
 'use strict';
 
 if (/Firefox/.test(navigator.userAgent)) {
@@ -115,7 +114,7 @@ if (/Firefox/.test(navigator.userAgent)) {
   chrome.proxy.settings.get = (prop, callback) => browser.proxy.settings.get({})
     .then(settings => callback(chrome.proxy.convert.fromFF(settings)));
 
-  chrome.proxy.settings.set = async (config, callback = function() {}) => {
+  chrome.proxy.settings.set = async(config, callback = function() {}) => {
     const settings = chrome.proxy.convert.toFF(config);
     // console.log(settings);
     await browser.proxy.settings.clear({});

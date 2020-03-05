@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   width: 400px;
   font-family: "Helvetica Neue",Helvetica,sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   background-color: #fff;
 }
 body>div {
@@ -31,7 +31,7 @@ td:last-child {
   height: 190px;
 }
 #power {
-  background-image: url(start.png);
+  background-image: url(power.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 120px;
@@ -39,15 +39,14 @@ td:last-child {
   height: 150px;
   cursor: pointer;
   border-radius: 50%;
-  background-color: #b5d7ef;
+  background-color: rgba(69, 153, 212, 1);
   outline: none;
 }
 #power:active {
   opacity: 0.5;
 }
 body[data-status=active] #power {
-  background-image: url(stop.png);
-  background-color: #c5e0c5;
+  background-color: green;
 }
 body[data-status=not-available] #power {
   opacity: 0.5;
@@ -95,7 +94,8 @@ body[data-status=searching] #power{
   white-space: nowrap;
   margin-bottom: 1px;
   padding: 2px 5px;
-  color: #737373;
+  color: #999;
+  font-size: 80%;
   border-top: solid 1px #eeeeee;
 }
 #log>span:first-child {
